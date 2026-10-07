@@ -1,0 +1,35 @@
+workbench.example.com {
+    encode zstd gzip
+    @not_read not method GET HEAD
+    respond @not_read "Method Not Allowed" 405
+    request_body {
+        max_size 64KB
+    }
+    reverse_proxy 127.0.0.1:4317
+    header {
+        -Server
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Robots-Tag "noindex, nofollow, noarchive"
+        Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+        Cross-Origin-Opener-Policy "same-origin"
+        Cross-Origin-Resource-Policy "same-origin"
+    }
+}
+
+analytics.example.com {
+    encode zstd gzip
+    @not_read not method GET HEAD
+    respond @not_read "Method Not Allowed" 405
+    request_body {
+        max_size 64KB
+    }
+    reverse_proxy 127.0.0.1:4318
+    header {
+        -Server
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Robots-Tag "noindex, nofollow, noarchive"
+        Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+        Cross-Origin-Opener-Policy "same-origin"
+        Cross-Origin-Resource-Policy "same-origin"
+    }
+}
