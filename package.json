@@ -1,0 +1,16 @@
+{
+  "name": "tianshen-content-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI 内容运营工作台与作品数据看板",
+  "type": "module",
+  "scripts": {
+    "start:workbench": "SITE_KIND=workbench PORT=4317 node server.mjs",
+    "start:analytics": "SITE_KIND=analytics PORT=4318 node server.mjs",
+    "check": "node --check server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
