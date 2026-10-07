@@ -1,0 +1,17 @@
+{
+  "schema_version": "public-showcase/1.0",
+  "service": "tianshen-workbench",
+  "read_only": true,
+  "endpoints": {
+    "workbench": "GET /api/v1/workbench",
+    "workflows": "GET /api/v1/workbench/workflows",
+    "usage": "GET /api/v1/workbench/usage",
+    "media": "GET /api/v1/workbench/media/{64-char-hex-id}"
+  },
+  "privacy": {
+    "real_thread_ids": false,
+    "internal_workflows": false,
+    "source_paths": false,
+    "credentials": false
+  }
+}

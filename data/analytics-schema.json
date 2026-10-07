@@ -1,0 +1,29 @@
+{
+  "schema_version": "public-showcase/1.0",
+  "service": "tianshen-content-analytics",
+  "read_only": true,
+  "endpoints": {
+    "analytics": "GET /api/v1/analytics",
+    "content": "GET /api/v1/contents/XHS-编号",
+    "schema": "GET /api/v1/schema"
+  },
+  "privacy": {
+    "real_note_ids": false,
+    "source_paths": false,
+    "run_identifiers": false,
+    "credentials": false
+  },
+  "missing_values": "Missing remains null and is never coerced to zero.",
+  "core_metrics": [
+    "impressions",
+    "views",
+    "likes",
+    "favorites",
+    "comments",
+    "shares",
+    "new_followers",
+    "cover_ctr",
+    "average_view_duration",
+    "danmaku"
+  ]
+}
